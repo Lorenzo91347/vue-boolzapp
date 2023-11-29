@@ -114,6 +114,11 @@ header.left,
     background-image: url('../img/mine.jpg');
 }
 
+.access {
+    font-size: .875rem;
+    color: #bdbec0;
+}
+
 /* Left Column */
 
 .icons {
@@ -191,5 +196,25 @@ header.left,
 .text-field-2 {
     background-color: var(--text-input);
     height: 70px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.text-field-2 i {
+    color: #72757a;
+    font-size: 20px;
+}
+
+
+.text-field-2 input {
+    width: 100%;
+    height: 70%;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    margin-left: -25px;
 
 }

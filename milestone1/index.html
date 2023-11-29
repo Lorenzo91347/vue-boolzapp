@@ -35,7 +35,20 @@
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                 </div>
             </div>
-            <div class="header-right"></div>
+            <div class="header-right">
+                <div class="name-image">
+                    <img src="../img/avatar_1.jpg" alt="">
+                    <div>
+                        <div>Michele</div>
+                        <div class="access">Ultimo accesso oggi alle</div>
+                    </div>
+                </div>
+                <div class="icons">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-paperclip"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </div>
         </div>
         <div class="main-body">
             <div class="column-left">
@@ -53,17 +66,22 @@
                 </div>
                 <div class="contact-list">
                     <ol>
+
                         <li>
-                            <img v-for="(image,index) in [contacts.avatar]" :src="contacts[0].avatar"
-                                :alt="contacts.name">
-                            <div v-for="(name,index) in [contacts.name]">{{contacts[0].name}}</div>
+                            <img v-for="(image,index) in contacts" :src="contacts.avatar" :alt="contacts.name">
+                            <div v-for="(name,index) in contacts">{{contacts.name}}</div>
                         </li>
                     </ol>
                 </div>
             </div>
             <div class="column-right">
                 <div class="text-visual"></div>
-                <div class="text-field-2"></div>
+                <div class="text-field-2">
+                    <i class="fa-regular fa-face-smile"></i>
+                    <label for="message"></label>
+                    <input type="text" id="name" name="message" placeholder="Scrivi un messaggio">
+                    <i class="fa-solid fa-microphone"></i>
+                </div>
             </div>
         </div>
     </div>
