@@ -11,6 +11,9 @@
     --back-top: #009788;
     --back-bottom: #dbdbd1;
     --header: #eaeaea;
+    --left-column: #fbfbfb;
+    --notified: #8edafc;
+    --text-input: #f3eeea;
 }
 
 /* Backplate */
@@ -37,7 +40,6 @@
 /* Main App */
 
 .app-window {
-    height: 50px;
     height: 790px;
     max-width: 1380px;
     margin: 20px auto;
@@ -54,10 +56,29 @@
 
 .header-left {
     width: 30%;
-    border-right: 1px solid;
+    border-right: 0.5px solid rgba(0, 0, 0, 0.1);
+    margin: 0 5px;
 }
 
-.header-right {}
+.header-right,
+.header-left {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name-image {
+    display: flex;
+    align-items: center;
+}
+
+.name-image img,
+.contact-list ol li img {
+    width: 50px;
+    border-radius: 50%;
+
+}
+
+
 
 /* Head and body common classes */
 
@@ -86,9 +107,89 @@ header.left,
 }
 
 .column-left {
-    background-color: aqua;
+    background-color: var(--left-column);
 }
 
 .column-right {
-    background-image: url(...\img\mine.jpg);
+    background-image: url('../img/mine.jpg');
+}
+
+/* Left Column */
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 1.25rem;
+    gap: 1.25rem;
+    margin-right: .9375rem;
+    color: rgba(0, 0, 0, 0.2)
+}
+
+.notice {
+    background-color: var(--notified);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 10px;
+}
+
+.notice i {
+    font-size: 20px;
+    color: var(--notified);
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+
+}
+
+
+.text-field-1 {
+    background-color: #ffffff;
+    height: 35px;
+    margin: 5px;
+    border: 0.1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 10px;
+
+}
+
+.text-field-1 i {
+    color: #bdbec0;
+}
+
+
+.text-field-1 input {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.contact-list {
+    padding: 10px;
+}
+
+.contact-list ol li {
+    display: flex;
+    gap: 5px;
+}
+
+
+
+/* right Column */
+
+.text-visual {
+    background-image: url('../img/mine.jpg');
+    height: 100%;
+
+}
+
+.text-field-2 {
+    background-color: var(--text-input);
+    height: 70px;
+
 }
