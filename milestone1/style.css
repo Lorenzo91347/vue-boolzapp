@@ -10,16 +10,85 @@
 :root {
     --back-top: #009788;
     --back-bottom: #dbdbd1;
+    --header: #eaeaea;
 }
 
+/* Backplate */
 
 .back-top {
     height: 125px;
+    width: 100%;
     background-color: var(--back-top);
     z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .back-bottom {
+    width: 100%;
     background-color: var(--back-bottom);
     z-index: -1;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/* Main App */
+
+.app-window {
+    height: 50px;
+    height: 790px;
+    max-width: 1380px;
+    margin: 20px auto;
+
+}
+
+/* Header */
+
+.gen-header {
+    height: 70px;
+    background-color: var(--header);
+    display: flex;
+}
+
+.header-left {
+    width: 30%;
+    border-right: 1px solid;
+}
+
+.header-right {}
+
+/* Head and body common classes */
+
+.header-left,
+.header-right,
+.column-left,
+.column-right {
+    height: 100%;
+}
+
+header.left,
+.column-left {
+    width: 30%;
+}
+
+.header-right,
+.column-right {
+    width: 70%;
+}
+
+/*App Body */
+
+.main-body {
+    display: flex;
+    height: 100%;
+}
+
+.column-left {
+    background-color: aqua;
+}
+
+.column-right {
+    background-image: url(...\img\mine.jpg);
 }
