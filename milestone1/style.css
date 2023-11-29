@@ -1,0 +1,25 @@
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Colors */
+:root {
+    --back-top: #009788;
+    --back-bottom: #dbdbd1;
+}
+
+
+.back-top {
+    height: 125px;
+    background-color: var(--back-top);
+    z-index: -1;
+}
+
+.back-bottom {
+    background-color: var(--back-bottom);
+    z-index: -1;
+}
