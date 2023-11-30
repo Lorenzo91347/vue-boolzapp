@@ -74,21 +74,12 @@
                 </div>
             </div>
             <div class="column-right">
-                <div class="text-visual">
-                    <div class="mex-rec">
-                        <div class="received">Hai portato a spasso il cane?</div>
+                <div class="text-visual" v-for="(text,message) in contacts">
+                    <div class="mex-rec" v-if="received">
+                        <div class="received">{{text.messages.message}}</div>
                     </div>
-                    <div class="mex-sent">
-                        <div class="sent">Fatto!</div>
-                    </div>
-                    <div class="mex-rec">
-                        <div class="received">Hai portato a spasso il cane?</div>
-                    </div>
-                    <div class="mex-rec">
-                        <div class="received">Hai portato a spasso il cane?</div>
-                    </div>
-                    <div class="mex-sent">
-                        <div class="sent">Fatto!</div>
+                    <div class="mex-sent" v-if="sent">
+                        <div class="sent">{{text.messages.message}}</div>
                     </div>
                 </div>
                 <div class="text-field-2">
