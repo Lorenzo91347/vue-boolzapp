@@ -66,16 +66,31 @@
                 </div>
                 <div class="contact-list">
                     <ol>
-
-                        <li>
-                            <img v-for="(image,index) in contacts" :src="contacts.avatar" :alt="contacts.name">
-                            <div v-for="(name,index) in contacts">{{contacts.name}}</div>
+                        <li v-for="contact in contacts" :key="contact.name">
+                            <img :src="contact.avatar" :alt="contact.name">
+                            <div>{{contact.name}}</div>
                         </li>
                     </ol>
                 </div>
             </div>
             <div class="column-right">
-                <div class="text-visual"></div>
+                <div class="text-visual">
+                    <div class="mex-rec">
+                        <div class="received">Hai portato a spasso il cane?</div>
+                    </div>
+                    <div class="mex-sent">
+                        <div class="sent">Fatto!</div>
+                    </div>
+                    <div class="mex-rec">
+                        <div class="received">Hai portato a spasso il cane?</div>
+                    </div>
+                    <div class="mex-rec">
+                        <div class="received">Hai portato a spasso il cane?</div>
+                    </div>
+                    <div class="mex-sent">
+                        <div class="sent">Fatto!</div>
+                    </div>
+                </div>
                 <div class="text-field-2">
                     <i class="fa-regular fa-face-smile"></i>
                     <label for="message"></label>

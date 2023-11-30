@@ -14,6 +14,8 @@
     --left-column: #fbfbfb;
     --notified: #8edafc;
     --text-input: #f3eeea;
+    --received: #d5f9ba;
+    --sent: #ffffff;
 }
 
 /* Backplate */
@@ -176,11 +178,13 @@ header.left,
 
 .contact-list {
     padding: 10px;
+    overflow-y: scroll;
 }
 
 .contact-list ol li {
     display: flex;
-    gap: 5px;
+    gap: 10px;
+    margin: 10px 0;
 }
 
 
@@ -190,8 +194,44 @@ header.left,
 .text-visual {
     background-image: url('../img/mine.jpg');
     height: 100%;
+    padding: 20px;
+    overflow-y: scroll;
+
 
 }
+
+.mex-rec,
+.mex-sent {
+    margin-top: 10px;
+}
+
+.mex-rec {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.received,
+.sent {
+    width: 320px;
+    height: 55px;
+    padding: 18px 15px;
+    border-radius: 10px;
+
+
+}
+
+.received {
+    background-color: var(--received);
+
+
+}
+
+.sent {
+    background-color: var(--sent);
+
+}
+
 
 .text-field-2 {
     background-color: var(--text-input);

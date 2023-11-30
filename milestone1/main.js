@@ -171,5 +171,16 @@ createApp({
             ],
             index: 0
         }
+    },
+    methods: {
+        getDate(arr) {
+            const now = arr;
+
+            const hoursAndMinutes = now.getHours() + ':' + now.getMinutes();
+            console.log(hoursAndMinutes);
+        },
+
+
     }
 }).mount('#app');
+
