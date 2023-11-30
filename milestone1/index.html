@@ -76,11 +76,11 @@
             <div class="column-right">
                 <div class="text-visual">
                     <div v-for="message in contact.messages">
-                        <div class="mex-rec" v-if="message.Status === 'received'">
-                            <div class="received">{{text.messages.message}}</div>
+                        <div class="mex-rec">
+                            <div class="received" v-if="message.Status === 'received'">{{text.messages.message}}</div>
                         </div>
-                        <div class="mex-sent" v-if="message.Status === 'sent'">
-                            <div class="sent">{{text.messages.message}}</div>
+                        <div class="mex-sent">
+                            <div class="sent" v-if="message.Status === 'sent'">{{text.messages.message}}</div>
                         </div>
                     </div>
                 </div>
