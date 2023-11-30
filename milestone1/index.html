@@ -75,24 +75,25 @@
             </div>
             <div class="column-right">
                 <div class="text-visual">
-                    <div v-for="message in contact.messages">
+                    <div v-for="message in contact">
                         <div class="mex-rec">
                             <div class="received" v-if="message.Status === 'received'">{{text.messages.message}}</div>
                         </div>
+                    </div>
+                    <div v-for="message in contact">
                         <div class="mex-sent">
                             <div class="sent" v-if="message.Status === 'sent'">{{text.messages.message}}</div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="text-field-2">
-                <i class="fa-regular fa-face-smile"></i>
-                <label for="message"></label>
-                <input type="text" id="name" name="message" placeholder="Scrivi un messaggio">
-                <i class="fa-solid fa-microphone"></i>
+                <div class="text-field-2">
+                    <i class="fa-regular fa-face-smile"></i>
+                    <label for="message"></label>
+                    <input type="text" id="name" name="message" placeholder="Scrivi un messaggio">
+                    <i class="fa-solid fa-microphone"></i>
+                </div>
             </div>
         </div>
-    </div>
     </div>
 
 </body>
