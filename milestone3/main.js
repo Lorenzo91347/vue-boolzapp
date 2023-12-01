@@ -183,11 +183,11 @@ createApp({
 
             }
         },
-        addTask(newArray) {
-            if (this.newArray.trim() !== null) {
+        addTask(arr) {
+            if (this.arr.trim() !== null) {
 
                 this.currentMessages.push({
-                    message: this.newArray,
+                    message: this.arr,
                     Status: sent,
                 });
                 this.newArray = '';
