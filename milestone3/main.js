@@ -171,11 +171,13 @@ createApp({
             ],
 
             currentMessages: [],
-            newMessage: []
+            newMessage: ''
+
 
         }
     },
     methods: {
+
         viewMessages(index) {
             if (this.contacts[index].messages) {
                 this.currentMessages = this.contacts[index].messages.map(message => ({ message: message.message, Status: message.Status }));
@@ -183,14 +185,19 @@ createApp({
 
             }
         },
-        messageAdd(arr) {
-            if (this.arr.trim() !== null) {
+        messageAdd() {
+            if (this.newMessage.trim() !== null) {
 
                 this.currentMessages.push({
-                    message: this.arr,
-                    Status: sent,
+                    message: this.newMessage,
+                    Status: 'sent',
                 });
-                this.newArray = '';
+                this.newMessage = '';
+                setTimeout(() => this.currentMessages.push({
+                    message: 'Ok!',
+                    Status: 'received'
+                }), 3000);
+
             }
         },
     }
