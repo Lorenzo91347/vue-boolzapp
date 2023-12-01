@@ -183,7 +183,7 @@ createApp({
 
             }
         },
-        addTask(arr) {
+        messageAdd(arr) {
             if (this.arr.trim() !== null) {
 
                 this.currentMessages.push({
