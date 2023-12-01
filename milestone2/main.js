@@ -180,11 +180,7 @@ createApp({
                 this.currentMessages = this.contacts[index].messages.map(message => message.message);
             }
         },
-        getMessageContent(message) {
-            return message.message;
 
-
-        },
     }
 
 }).mount('#app');
