@@ -74,18 +74,18 @@
                 </div>
             </div>
             <div class="column-right">
-                <template>
-                    <div class="text-visual">
-                        <div v-if="currentMessages.length >= 0">
-                            <div v-for="message in currentMessages">
-                                <div
-                                    :class="{'mex-rec received': message.Status === 'received', 'mex-sent sent': message.Status === 'sent'}">
-                                    {{ getMessageContent(message) }}
-                                </div>
+                <div class="text-visual">
+                    <div>
+                        <div v-for="message in currentMessages">
+                            <div :class="{
+                                'mex-rec received': Status === 'received',
+                                'mex-sent sent': Status === 'sent'
+                              }">{{message}}
                             </div>
                         </div>
                     </div>
-                </template>
+                </div>
+
                 <div class="text-field-2">
                     <i class="fa-regular fa-face-smile"></i>
                     <label for="message"></label>

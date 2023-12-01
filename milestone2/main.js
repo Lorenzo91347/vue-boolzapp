@@ -176,7 +176,7 @@ createApp({
     },
     methods: {
         viewMessages(index) {
-            if (this.contacts[index] && this.contacts[index].messages) {
+            if (this.contacts[index].messages) {
                 this.currentMessages = this.contacts[index].messages.map(message => message.message);
             }
         },
