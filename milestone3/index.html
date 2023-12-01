@@ -92,7 +92,8 @@
                 <div class="text-field-2">
                     <i class="fa-regular fa-face-smile"></i>
                     <label for="message"></label>
-                    <input type="text" id="message" name="message" placeholder="Scrivi un messaggio">
+                    <input type="text" id="message" name="message" @key.enter="messageAdd(newMessage)"
+                        placeholder="Scrivi un messaggio">
                     <i class="fa-solid fa-microphone"></i>
                 </div>
             </div>

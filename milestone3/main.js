@@ -170,7 +170,8 @@ createApp({
                 }
             ],
 
-            currentMessages: []
+            currentMessages: [],
+            newMessage: []
 
         }
     },
@@ -182,7 +183,16 @@ createApp({
 
             }
         },
+        addTask(newArray) {
+            if (this.newArray.trim() !== null) {
 
+                this.currentMessages.push({
+                    message: this.newArray,
+                    Status: sent,
+                });
+                this.newArray = '';
+            }
+        },
     }
 
 }).mount('#app');
