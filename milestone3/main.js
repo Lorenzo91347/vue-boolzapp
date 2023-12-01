@@ -196,7 +196,7 @@ createApp({
                 setTimeout(() => this.currentMessages.push({
                     message: 'Ok!',
                     Status: 'received'
-                }), 3000);
+                }), 1000);
 
             }
         },
