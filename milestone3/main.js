@@ -171,7 +171,9 @@ createApp({
             ],
 
             currentMessages: [],
-            newMessage: ''
+            newMessage: '',
+            currentContact: '',
+            searchQuery: ''
 
 
         }
@@ -200,7 +202,30 @@ createApp({
 
             }
         },
+
+        setCurrentContact(contact) {
+            this.currentContact = contact;
+        },
+        filteredContact() {
+            if (this.searchQuery.trim() !== '') {
+                return this.contacts.filter((contacts) =>
+                    contacts.name.toLowerCase().includes(this.searchQuery.toLowerCase())
+                )
+                    .map((contacts) => {
+                        return {
+                            ...contacts,
+                            name: contacts.name
+                        };
+                    });
+            }
+            else {
+                return this.contacts
+            }
+        }
     }
+
+
+
 
 }).mount('#app');
 
