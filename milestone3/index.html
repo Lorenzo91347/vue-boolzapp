@@ -68,7 +68,11 @@
                     <ol v-if="filteredContact().length > 0">
                         <li v-for="(contact,index) in filteredContact()" :key="index" @click="viewMessages(index)">
                             <img :src="contact.avatar" :alt="contact.name">
-                            <div>{{contact.name}}</div>
+                            <div>{{contact.name}}
+                                <div>ultimo messaggio inviato</div>
+                            </div>
+                            <div class="contact-date">12.00</div>
+
                         </li>
                     </ol>
                 </div>
@@ -77,13 +81,17 @@
                 <div class="text-visual">
                     <div>
                         <div v-for="message in currentMessages">
-                            <div :class="{'mex-rec' :message.Status ==='received',
-                                        'mex-sent' :message.Status === 'sent'}">
+                            <div :class="{
+                                    'mex-rec' :message.Status ==='received',
+                                    'mex-sent' :message.Status === 'sent'
+                                }">
                                 <div :class="{
                                     ' received': message.Status === 'received',
                                     ' sent': message.Status === 'sent'
                                 }">{{message.message}}
+                                    <span>{{message.date}}</span>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -104,6 +112,10 @@
 
 <!-- Scripts -->
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="
+https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js
+"></script>
+
 <script src="main.js"></script>
 
 </html>

@@ -182,7 +182,8 @@ createApp({
 
         viewMessages(index) {
             if (this.contacts[index].messages) {
-                this.currentMessages = this.contacts[index].messages.map(message => ({ message: message.message, Status: message.Status }));
+                this.currentMessages = this.contacts[index].messages.map(message => ({ message: message.message, Status: message.Status, date: message.date.substr(10, 6) }));
+
 
 
             }
@@ -228,6 +229,8 @@ createApp({
 
 
 }).mount('#app');
+
+
 
 
 

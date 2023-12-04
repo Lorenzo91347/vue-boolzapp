@@ -189,6 +189,19 @@ header.left,
     display: flex;
     gap: 10px;
     margin: 10px 0;
+    position: relative;
+}
+
+.contact-list ol li div div,
+.contact-date {
+    font-size: .75rem;
+    color: #bdbec0;
+}
+
+.contact-date {
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 
@@ -218,10 +231,19 @@ header.left,
 .received,
 .sent {
     width: 320px;
-    height: 55px;
     padding: 18px 15px;
     border-radius: 10px;
+    position: relative;
 
+
+}
+
+.received span,
+.sent span {
+    position: absolute;
+    bottom: 5px;
+    right: 15px;
+    font-size: .75rem;
 
 }
 
